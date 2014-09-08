@@ -1,7 +1,4 @@
 <?php
-require_once "PHPUnit/Autoload.php";
-require_once "User.php";
-
 /**
  * @coversDefaultClass User
  * @covers ::<!public>
