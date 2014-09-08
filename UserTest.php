@@ -2,16 +2,35 @@
 require_once "PHPUnit/Autoload.php";
 require_once "User.php";
 
+/**
+ * @coversDefaultClass User
+ * @covers ::<!public>
+ */
 class UserTest extends PHPUnit_Framework_TestCase
 {
-    // test the talk method
-    public function testTalk() {
-        // make an instance of the user
-        $user = new User();
+    /** @var User */
+    protected $user = null;
 
-        // use assertEquals to ensure the greeting is what you
+    /**
+     * Make an instance of the user for each test to use
+     */
+    public function setUp()
+    {
+        $this->user = new User();
+    }
+    
+    /** 
+     * @test 
+     * @covers ::talk
+     */
+    public function userShouldRespondWhenAskedToTalk() {
+
+        $user = $this->user;
+        
         $expected = "Hello world!";
         $actual = $user->talk();
+        
+        // use assertEquals to ensure the greeting is what you expect
         $this->assertEquals($expected, $actual);
     }
 }
