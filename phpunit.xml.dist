@@ -40,15 +40,19 @@
 
 	<logging>
 	    <log type="coverage-text" target="php://stdout"/>
+	    <log type="testdox-text" target="php://stdout"/>
     </logging>
 
     <filter>
-    <!-- When your tests use classes or mocks based on vendor code this will make
-         sure that those vendor classes do not polute your coverage report.
-      -->
+        <!-- Because checkForUnintentionallyCoveredCode is turned on above we
+             need to tell PhpUnit which classes we actually care about in 
+             regards to code coverage. We use a whitelist approach for this.
+        -->
         <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
             <exclude>
                 <directory suffix=".php">./vendor</directory>
+                <directory suffix=".php">./tests</directory>
             </exclude>
         </whitelist>
     </filter>    

@@ -38,7 +38,7 @@ class UserTest extends PHPUnit_Framework_TestCase
      * @test 
      * @covers ::getName     
      */
-    public function userShouldOnlyHaveNameAfterGivenName() {
+    public function userShouldOnlyHaveNameAfterNameIsGiven() {
         $user = $this->user;
 
         $actual = $user->getName();        
@@ -54,7 +54,7 @@ class UserTest extends PHPUnit_Framework_TestCase
      *
      * @dataProvider providerOfNames
      */
-    public function userShouldRememberNameWhenGivenName($name) {
+    public function userShouldRememberNameWhenNameIsGiven($name) {
         
         $user = $this->user;
         
