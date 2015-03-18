@@ -1,3 +1,3 @@
 A simple PHP project with a single class and an unit test.
 
-[![Wercker status](https://app.wercker.com/status/17dea15e532b81d1ea13badc34e75750/m)](https://app.wercker.com/project/bykey/17dea15e532b81d1ea13badc34e75750)
+[![wercker status](https://app.wercker.com/status/3c5bec985caa33ad882cce75635f05af/m "wercker status")](https://app.wercker.com/project/bykey/3c5bec985caa33ad882cce75635f05af)
