@@ -1,15 +1,13 @@
 box: wercker/php
 build:
   steps:
-    # Uncomment this if you have an composer.json
-    # to install you dependencies
-    #
-    # - script:
-    #     name: install dependencies
-    #     code: |
-    #       composer install
+    - script:
+        name: install dependencies
+        code: |-
+            composer install --dev --no-interaction
     - script:
         name: run unit tests
-        code: |
-          cd $WERCKER_SOURCE_DIR
-          phpunit .
+        code: |-
+            cd $WERCKER_SOURCE_DIR
+            php ./vendor/bin/phpunit
+

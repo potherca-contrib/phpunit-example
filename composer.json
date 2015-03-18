@@ -1,0 +1,32 @@
+{
+    "name": "pjvds/php-phpunit-example",
+    "description": "A simple PHP project with a single class and an unit test.",
+    "version": "0.0.0",
+    "homepage": "https://github.com/pjvds/php-phpunit-example/",
+    "support": {
+        "source": "https://github.com/pjvds/php-phpunit-example/",
+        "issues": "https://github.com/pjvds/php-phpunit-example/issues"
+    },
+    "license": "unknown",
+    "authors": [
+        {
+            "name": "Pieter Joost van de Sande",
+            "email": "pj@born2code.net",
+            "homepage": "http://born2code.net/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "./src"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
